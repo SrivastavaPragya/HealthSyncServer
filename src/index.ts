@@ -21,7 +21,7 @@ app.use("/doctor", DoctorRoute);
 // Test Route 
 app.get("/",(req,res)=>{
     res.json({
-        message:"Welcome to MotherFucker!"
+        message:"Welcome to HealthSyncServer!"
     })
 })
 
