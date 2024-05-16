@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "23210079-6801-4252-a5d5-69cbf1b10850",
+		"name": "Health Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25576943",
+		"_collection_link": "https://universal-equinox-800877.postman.co/workspace/Team-Workspace~d869bcde-f814-4d3a-8adc-b9c453740703/collection/25576943-23210079-6801-4252-a5d5-69cbf1b10850?action=share&source=collection_link&creator=25576943"
+	},
+	"item": [
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Patient Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Om nigam\",\r\n    \"address\": \"KanpurNagarkehaiham\",\r\n    \"email\": \"HelloHelloNagar@gmail.com\",\r\n    \"phoneNumber\": \"+917753951732\",\r\n    \"password\": \"mausikibetI07\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/patient/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"patient",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patient Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"HelloHelloNagar@gmail.com\",\r\n    \"password\": \"mausikibetI07\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/patient/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"patient",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Patient's Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvaGVsbG9uYWdhckBnbWFpbC5jb20iLCJpZCI6IjY2NDVjYTdjNWEyMjk3MjE2ZjVjYmE4MCIsImlhdCI6MTcxNTg1MDI0OSwiZXhwIjoxNzE1ODUzODQ5fQ.jC0JgOnPIiiGi8HGxxSN3ym6C9mpPNYOUFrxOkwegnA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Om nigam\",\r\n    \"address\": \"Kanpur Nagar In Dlehi\",\r\n    \"email\": \"HelloHelloNagar@gmail.com\",\r\n    \"phoneNumber\": \"+917753951732\",\r\n    \"password\": \"mausikibetI07\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/patient/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"patient",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hospital",
+			"item": [
+				{
+					"name": "Create Hospital",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"PGI Hospital\",\r\n    \"TotalPatientCount\": \"99\",\r\n    \"TotalDoctorCount\": \"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/hospital/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"hospital",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hospital Info",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hospitalId\":\"6645ce9f7885f583ccf6a7d6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/hospital/info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"hospital",
+								"info"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctor",
+			"item": [
+				{
+					"name": "Create Doctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Dr. Om Nigam\",\r\n    \"PatientCount\":97,\r\n    \"HospitalId\":\"6645ce9f7885f583ccf6a7d6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/doctor/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"doctor",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Doctor Information",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Dr. Om Mathur\",\r\n    \"PatientCount\":97,\r\n    \"HospitalId\":\"6645ce9f7885f583ccf6a7d6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/doctor/update/6645cef57885f583ccf6a7d8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"doctor",
+								"update",
+								"6645cef57885f583ccf6a7d8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test Route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
